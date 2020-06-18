@@ -1,0 +1,23 @@
+{
+  "transaction2App": {
+    "catonlinecanalenum": {
+      "home": {
+        "title": "Catonlinecanalenums",
+        "createLabel": "Create a new Catonlinecanalenum",
+        "createOrEditLabel": "Create or edit a Catonlinecanalenum",
+        "notFound": "No Catonlinecanalenums found"
+      },
+      "created": "A new Catonlinecanalenum is created with identifier {{ param }}",
+      "updated": "A Catonlinecanalenum is updated with identifier {{ param }}",
+      "deleted": "A Catonlinecanalenum is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Catonlinecanalenum {{ id }}?"
+      },
+      "detail": {
+        "title": "Catonlinecanalenum"
+      },
+      "pel": "Pel",
+      "ptel": "Ptel"
+    }
+  }
+}

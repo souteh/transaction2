@@ -1,0 +1,102 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-formulationentity-heading" jhiTranslate="transaction2App.formulationentity.home.createOrEditLabel">Create or edit a Formulationentity</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="transaction2App.formulationentity.identifiantconc" for="field_identifiantconc">Identifiantconc</label>
+                    <input type="number" class="form-control" name="identifiantconc" id="field_identifiantconc"
+                           formControlName="identifiantconc"/>
+                    <div *ngIf="editForm.get('identifiantconc')!.invalid && (editForm.get('identifiantconc')!.dirty || editForm.get('identifiantconc')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('identifiantconc')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('identifiantconc')?.errors?.number" jhiTranslate="entity.validation.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="transaction2App.formulationentity.idformulation" for="field_idformulation">Idformulation</label>
+                    <input type="number" class="form-control" name="idformulation" id="field_idformulation"
+                           formControlName="idformulation"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="transaction2App.formulationentity.codeproduit" for="field_codeproduit">Codeproduit</label>
+                    <input type="text" class="form-control" name="codeproduit" id="field_codeproduit"
+                           formControlName="codeproduit"/>
+                    <div *ngIf="editForm.get('codeproduit')!.invalid && (editForm.get('codeproduit')!.dirty || editForm.get('codeproduit')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('codeproduit')?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" [translateValues]="{ max: 254 }">
+                        This field cannot be longer than 254 characters.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="transaction2App.formulationentity.formcomplete" for="field_formcomplete">Formcomplete</label>
+                    <input type="checkbox" class="form-control" name="formcomplete" id="field_formcomplete"
+                           formControlName="formcomplete"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="transaction2App.formulationentity.designation" for="field_designation">Designation</label>
+                    <input type="text" class="form-control" name="designation" id="field_designation"
+                           formControlName="designation"/>
+                    <div *ngIf="editForm.get('designation')!.invalid && (editForm.get('designation')!.dirty || editForm.get('designation')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('designation')?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" [translateValues]="{ max: 254 }">
+                        This field cannot be longer than 254 characters.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="transaction2App.formulationentity.misecomb" for="field_misecomb">Misecomb</label>
+                    <input type="text" class="form-control" name="misecomb" id="field_misecomb"
+                           formControlName="misecomb"/>
+                    <div *ngIf="editForm.get('misecomb')!.invalid && (editForm.get('misecomb')!.dirty || editForm.get('misecomb')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('misecomb')?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" [translateValues]="{ max: 254 }">
+                        This field cannot be longer than 254 characters.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="transaction2App.formulationentity.misetotale" for="field_misetotale">Misetotale</label>
+                    <input type="number" class="form-control" name="misetotale" id="field_misetotale"
+                           formControlName="misetotale"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="transaction2App.formulationentity.numform" for="field_numform">Numform</label>
+                    <input type="number" class="form-control" name="numform" id="field_numform"
+                           formControlName="numform"/>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

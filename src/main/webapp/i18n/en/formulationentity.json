@@ -1,0 +1,29 @@
+{
+  "transaction2App": {
+    "formulationentity": {
+      "home": {
+        "title": "Formulationentities",
+        "createLabel": "Create a new Formulationentity",
+        "createOrEditLabel": "Create or edit a Formulationentity",
+        "notFound": "No Formulationentities found"
+      },
+      "created": "A new Formulationentity is created with identifier {{ param }}",
+      "updated": "A Formulationentity is updated with identifier {{ param }}",
+      "deleted": "A Formulationentity is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Formulationentity {{ id }}?"
+      },
+      "detail": {
+        "title": "Formulationentity"
+      },
+      "identifiantconc": "Identifiantconc",
+      "idformulation": "Idformulation",
+      "codeproduit": "Codeproduit",
+      "formcomplete": "Formcomplete",
+      "designation": "Designation",
+      "misecomb": "Misecomb",
+      "misetotale": "Misetotale",
+      "numform": "Numform"
+    }
+  }
+}

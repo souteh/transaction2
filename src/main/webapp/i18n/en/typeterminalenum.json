@@ -1,0 +1,25 @@
+{
+  "transaction2App": {
+    "typeterminalenum": {
+      "home": {
+        "title": "Typeterminalenums",
+        "createLabel": "Create a new Typeterminalenum",
+        "createOrEditLabel": "Create or edit a Typeterminalenum",
+        "notFound": "No Typeterminalenums found"
+      },
+      "created": "A new Typeterminalenum is created with identifier {{ param }}",
+      "updated": "A Typeterminalenum is updated with identifier {{ param }}",
+      "deleted": "A Typeterminalenum is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Typeterminalenum {{ id }}?"
+      },
+      "detail": {
+        "title": "Typeterminalenum"
+      },
+      "t2020": "T 2020",
+      "t2030": "T 2030",
+      "b2062": "B 2062",
+      "pda": "Pda"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="clientglentity">
+            <h2><span jhiTranslate="transaction2App.clientglentity.detail.title">Clientglentity</span> {{ clientglentity.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="transaction2App.clientglentity.nom">Nom</span></dt>
+                <dd>
+                    <span>{{ clientglentity.nom }}</span>
+                </dd>
+                <dt><span jhiTranslate="transaction2App.clientglentity.prenom">Prenom</span></dt>
+                <dd>
+                    <span>{{ clientglentity.prenom }}</span>
+                </dd>
+                <dt><span jhiTranslate="transaction2App.clientglentity.cin">Cin</span></dt>
+                <dd>
+                    <span>{{ clientglentity.cin }}</span>
+                </dd>
+                <dt><span jhiTranslate="transaction2App.clientglentity.telephone">Telephone</span></dt>
+                <dd>
+                    <span>{{ clientglentity.telephone }}</span>
+                </dd>
+                <dt><span jhiTranslate="transaction2App.clientglentity.commentaire">Commentaire</span></dt>
+                <dd>
+                    <span>{{ clientglentity.commentaire }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/clientglentity', clientglentity.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

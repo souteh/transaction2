@@ -1,0 +1,23 @@
+{
+  "transaction2App": {
+    "association12": {
+      "home": {
+        "title": "Association 12 S",
+        "createLabel": "Create a new Association 12",
+        "createOrEditLabel": "Create or edit a Association 12",
+        "notFound": "No Association 12 S found"
+      },
+      "created": "A new Association 12 is created with identifier {{ param }}",
+      "updated": "A Association 12 is updated with identifier {{ param }}",
+      "deleted": "A Association 12 is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Association 12 {{ id }}?"
+      },
+      "detail": {
+        "title": "Association 12"
+      },
+      "identifiantconc": "Identifiantconc",
+      "id": "Id"
+    }
+  }
+}

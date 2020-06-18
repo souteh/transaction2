@@ -1,0 +1,23 @@
+{
+  "transaction2App": {
+    "modeoperationenum": {
+      "home": {
+        "title": "Modeoperationenums",
+        "createLabel": "Create a new Modeoperationenum",
+        "createOrEditLabel": "Create or edit a Modeoperationenum",
+        "notFound": "No Modeoperationenums found"
+      },
+      "created": "A new Modeoperationenum is created with identifier {{ param }}",
+      "updated": "A Modeoperationenum is updated with identifier {{ param }}",
+      "deleted": "A Modeoperationenum is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Modeoperationenum {{ id }}?"
+      },
+      "detail": {
+        "title": "Modeoperationenum"
+      },
+      "automatique": "Automatique",
+      "manuel": "Manuel"
+    }
+  }
+}

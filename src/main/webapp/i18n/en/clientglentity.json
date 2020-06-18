@@ -1,0 +1,26 @@
+{
+  "transaction2App": {
+    "clientglentity": {
+      "home": {
+        "title": "Clientglentities",
+        "createLabel": "Create a new Clientglentity",
+        "createOrEditLabel": "Create or edit a Clientglentity",
+        "notFound": "No Clientglentities found"
+      },
+      "created": "A new Clientglentity is created with identifier {{ param }}",
+      "updated": "A Clientglentity is updated with identifier {{ param }}",
+      "deleted": "A Clientglentity is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Clientglentity {{ id }}?"
+      },
+      "detail": {
+        "title": "Clientglentity"
+      },
+      "nom": "Nom",
+      "prenom": "Prenom",
+      "cin": "Cin",
+      "telephone": "Telephone",
+      "commentaire": "Commentaire"
+    }
+  }
+}

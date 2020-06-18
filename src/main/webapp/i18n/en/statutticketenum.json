@@ -1,0 +1,25 @@
+{
+  "transaction2App": {
+    "statutticketenum": {
+      "home": {
+        "title": "Statutticketenums",
+        "createLabel": "Create a new Statutticketenum",
+        "createOrEditLabel": "Create or edit a Statutticketenum",
+        "notFound": "No Statutticketenums found"
+      },
+      "created": "A new Statutticketenum is created with identifier {{ param }}",
+      "updated": "A Statutticketenum is updated with identifier {{ param }}",
+      "deleted": "A Statutticketenum is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Statutticketenum {{ id }}?"
+      },
+      "detail": {
+        "title": "Statutticketenum"
+      },
+      "valide": "Valide",
+      "annule": "Annule",
+      "paye": "Paye",
+      "rembourse": "Rembourse"
+    }
+  }
+}

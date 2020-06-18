@@ -1,0 +1,38 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="typeoperationenum">
+            <h2><span jhiTranslate="transaction2App.typeoperationenum.detail.title">Typeoperationenum</span> {{ typeoperationenum.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="transaction2App.typeoperationenum.pari">Pari</span></dt>
+                <dd>
+                    <span>{{ typeoperationenum.pari }}</span>
+                </dd>
+                <dt><span jhiTranslate="transaction2App.typeoperationenum.annulation">Annulation</span></dt>
+                <dd>
+                    <span>{{ typeoperationenum.annulation }}</span>
+                </dd>
+                <dt><span jhiTranslate="transaction2App.typeoperationenum.paiement">Paiement</span></dt>
+                <dd>
+                    <span>{{ typeoperationenum.paiement }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/typeoperationenum', typeoperationenum.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

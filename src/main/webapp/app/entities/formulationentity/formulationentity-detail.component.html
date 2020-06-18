@@ -1,0 +1,58 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="formulationentity">
+            <h2><span jhiTranslate="transaction2App.formulationentity.detail.title">Formulationentity</span> {{ formulationentity.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="transaction2App.formulationentity.identifiantconc">Identifiantconc</span></dt>
+                <dd>
+                    <span>{{ formulationentity.identifiantconc }}</span>
+                </dd>
+                <dt><span jhiTranslate="transaction2App.formulationentity.idformulation">Idformulation</span></dt>
+                <dd>
+                    <span>{{ formulationentity.idformulation }}</span>
+                </dd>
+                <dt><span jhiTranslate="transaction2App.formulationentity.codeproduit">Codeproduit</span></dt>
+                <dd>
+                    <span>{{ formulationentity.codeproduit }}</span>
+                </dd>
+                <dt><span jhiTranslate="transaction2App.formulationentity.formcomplete">Formcomplete</span></dt>
+                <dd>
+                    <span>{{ formulationentity.formcomplete }}</span>
+                </dd>
+                <dt><span jhiTranslate="transaction2App.formulationentity.designation">Designation</span></dt>
+                <dd>
+                    <span>{{ formulationentity.designation }}</span>
+                </dd>
+                <dt><span jhiTranslate="transaction2App.formulationentity.misecomb">Misecomb</span></dt>
+                <dd>
+                    <span>{{ formulationentity.misecomb }}</span>
+                </dd>
+                <dt><span jhiTranslate="transaction2App.formulationentity.misetotale">Misetotale</span></dt>
+                <dd>
+                    <span>{{ formulationentity.misetotale }}</span>
+                </dd>
+                <dt><span jhiTranslate="transaction2App.formulationentity.numform">Numform</span></dt>
+                <dd>
+                    <span>{{ formulationentity.numform }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/formulationentity', formulationentity.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

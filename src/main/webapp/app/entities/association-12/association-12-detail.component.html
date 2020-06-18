@@ -1,0 +1,36 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="association12">
+            <h2><span jhiTranslate="transaction2App.association12.detail.title">Association 12</span> {{ association12.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="transaction2App.association12.identifiantconc">Identifiantconc</span></dt>
+                <dd>
+                    <span>{{ association12.identifiantconc }}</span>
+                </dd>
+                <dt><span jhiTranslate="transaction2App.association12.id">Id</span></dt>
+                <dd>
+                    <div *ngIf="association12.id">
+                        <a [routerLink]="['/clientglentity', association12.id?.id, 'view']">{{ association12.id?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/association-12', association12.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

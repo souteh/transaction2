@@ -1,0 +1,23 @@
+{
+  "transaction2App": {
+    "typecanalenum": {
+      "home": {
+        "title": "Typecanalenums",
+        "createLabel": "Create a new Typecanalenum",
+        "createOrEditLabel": "Create or edit a Typecanalenum",
+        "notFound": "No Typecanalenums found"
+      },
+      "created": "A new Typecanalenum is created with identifier {{ param }}",
+      "updated": "A Typecanalenum is updated with identifier {{ param }}",
+      "deleted": "A Typecanalenum is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Typecanalenum {{ id }}?"
+      },
+      "detail": {
+        "title": "Typecanalenum"
+      },
+      "terminal": "Terminal",
+      "online": "Online"
+    }
+  }
+}
