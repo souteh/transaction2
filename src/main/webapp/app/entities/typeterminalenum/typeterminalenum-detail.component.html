@@ -1,0 +1,42 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="typeterminalenum">
+            <h2><span jhiTranslate="transaction2App.typeterminalenum.detail.title">Typeterminalenum</span> {{ typeterminalenum.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="transaction2App.typeterminalenum.t2020">T 2020</span></dt>
+                <dd>
+                    <span>{{ typeterminalenum.t2020 }}</span>
+                </dd>
+                <dt><span jhiTranslate="transaction2App.typeterminalenum.t2030">T 2030</span></dt>
+                <dd>
+                    <span>{{ typeterminalenum.t2030 }}</span>
+                </dd>
+                <dt><span jhiTranslate="transaction2App.typeterminalenum.b2062">B 2062</span></dt>
+                <dd>
+                    <span>{{ typeterminalenum.b2062 }}</span>
+                </dd>
+                <dt><span jhiTranslate="transaction2App.typeterminalenum.pda">Pda</span></dt>
+                <dd>
+                    <span>{{ typeterminalenum.pda }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/typeterminalenum', typeterminalenum.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

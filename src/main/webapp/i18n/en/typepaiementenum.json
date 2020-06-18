@@ -1,0 +1,23 @@
+{
+  "transaction2App": {
+    "typepaiementenum": {
+      "home": {
+        "title": "Typepaiementenums",
+        "createLabel": "Create a new Typepaiementenum",
+        "createOrEditLabel": "Create or edit a Typepaiementenum",
+        "notFound": "No Typepaiementenums found"
+      },
+      "created": "A new Typepaiementenum is created with identifier {{ param }}",
+      "updated": "A Typepaiementenum is updated with identifier {{ param }}",
+      "deleted": "A Typepaiementenum is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Typepaiementenum {{ id }}?"
+      },
+      "detail": {
+        "title": "Typepaiementenum"
+      },
+      "total": "Total",
+      "avance": "Avance"
+    }
+  }
+}

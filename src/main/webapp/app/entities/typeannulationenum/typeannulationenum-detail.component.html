@@ -1,0 +1,42 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="typeannulationenum">
+            <h2><span jhiTranslate="transaction2App.typeannulationenum.detail.title">Typeannulationenum</span> {{ typeannulationenum.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="transaction2App.typeannulationenum.client">Client</span></dt>
+                <dd>
+                    <span>{{ typeannulationenum.client }}</span>
+                </dd>
+                <dt><span jhiTranslate="transaction2App.typeannulationenum.machine">Machine</span></dt>
+                <dd>
+                    <span>{{ typeannulationenum.machine }}</span>
+                </dd>
+                <dt><span jhiTranslate="transaction2App.typeannulationenum.exceptionnelle">Exceptionnelle</span></dt>
+                <dd>
+                    <span>{{ typeannulationenum.exceptionnelle }}</span>
+                </dd>
+                <dt><span jhiTranslate="transaction2App.typeannulationenum.systeme">Systeme</span></dt>
+                <dd>
+                    <span>{{ typeannulationenum.systeme }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/typeannulationenum', typeannulationenum.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

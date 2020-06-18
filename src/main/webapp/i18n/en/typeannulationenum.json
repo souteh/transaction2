@@ -1,0 +1,25 @@
+{
+  "transaction2App": {
+    "typeannulationenum": {
+      "home": {
+        "title": "Typeannulationenums",
+        "createLabel": "Create a new Typeannulationenum",
+        "createOrEditLabel": "Create or edit a Typeannulationenum",
+        "notFound": "No Typeannulationenums found"
+      },
+      "created": "A new Typeannulationenum is created with identifier {{ param }}",
+      "updated": "A Typeannulationenum is updated with identifier {{ param }}",
+      "deleted": "A Typeannulationenum is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Typeannulationenum {{ id }}?"
+      },
+      "detail": {
+        "title": "Typeannulationenum"
+      },
+      "client": "Client",
+      "machine": "Machine",
+      "exceptionnelle": "Exceptionnelle",
+      "systeme": "Systeme"
+    }
+  }
+}

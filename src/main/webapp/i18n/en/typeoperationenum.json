@@ -1,0 +1,24 @@
+{
+  "transaction2App": {
+    "typeoperationenum": {
+      "home": {
+        "title": "Typeoperationenums",
+        "createLabel": "Create a new Typeoperationenum",
+        "createOrEditLabel": "Create or edit a Typeoperationenum",
+        "notFound": "No Typeoperationenums found"
+      },
+      "created": "A new Typeoperationenum is created with identifier {{ param }}",
+      "updated": "A Typeoperationenum is updated with identifier {{ param }}",
+      "deleted": "A Typeoperationenum is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Typeoperationenum {{ id }}?"
+      },
+      "detail": {
+        "title": "Typeoperationenum"
+      },
+      "pari": "Pari",
+      "annulation": "Annulation",
+      "paiement": "Paiement"
+    }
+  }
+}

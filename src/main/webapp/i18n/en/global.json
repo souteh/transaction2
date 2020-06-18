@@ -7,6 +7,18 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Entities",
+        "association12": "Association 12",
+        "catonlinecanalenum": "Catonlinecanalenum",
+        "clientglentity": "Clientglentity",
+        "formulationentity": "Formulationentity",
+        "modeoperationenum": "Modeoperationenum",
+        "pdventity": "Pdventity",
+        "statutticketenum": "Statutticketenum",
+        "typeannulationenum": "Typeannulationenum",
+        "typecanalenum": "Typecanalenum",
+        "typeoperationenum": "Typeoperationenum",
+        "typepaiementenum": "Typepaiementenum",
+        "typeterminalenum": "Typeterminalenum",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

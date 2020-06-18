@@ -1,0 +1,77 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="transaction2App.statutticketenum.home.title">Statutticketenums</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-statutticketenum" [routerLink]="['/statutticketenum/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="transaction2App.statutticketenum.home.createLabel">
+            Create a new Statutticketenum
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="statutticketenums?.length === 0">
+        <span jhiTranslate="transaction2App.statutticketenum.home.notFound">No statutticketenums found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="statutticketenums && statutticketenums.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" [callback]="loadPage.bind(this)">
+                    <th scope="col"  jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="valide"><span jhiTranslate="transaction2App.statutticketenum.valide">Valide</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="annule"><span jhiTranslate="transaction2App.statutticketenum.annule">Annule</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="paye"><span jhiTranslate="transaction2App.statutticketenum.paye">Paye</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="rembourse"><span jhiTranslate="transaction2App.statutticketenum.rembourse">Rembourse</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let statutticketenum of statutticketenums ;trackBy: trackId">
+                    <td><a [routerLink]="['/statutticketenum', statutticketenum.id, 'view']">{{ statutticketenum.id }}</a></td>
+                    <td>{{ statutticketenum.valide }}</td>
+                    <td>{{ statutticketenum.annule }}</td>
+                    <td>{{ statutticketenum.paye }}</td>
+                    <td>{{ statutticketenum.rembourse }}</td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/statutticketenum', statutticketenum.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/statutticketenum', statutticketenum.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(statutticketenum)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div *ngIf="statutticketenums && statutticketenums.length > 0">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="ngbPaginationPage" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage($event)"></ngb-pagination>
+        </div>
+    </div>
+</div>
